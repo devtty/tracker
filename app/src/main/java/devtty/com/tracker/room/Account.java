@@ -8,9 +8,27 @@ import androidx.room.PrimaryKey;
 public class Account {
 
     @PrimaryKey(autoGenerate = true)
-    public int uid;
+    private int uid;
 
     @ColumnInfo(name = "name")
-    public String name;
+    private String name;
 
+    public Account(){
+    }
+
+    public int getUid(){
+        return this.uid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
 }

@@ -20,4 +20,6 @@ public interface AccountDao {
     @Delete
     void delete(Account account);
 
+    @Query("DELETE FROM account")
+    void deleteAll();
 }
